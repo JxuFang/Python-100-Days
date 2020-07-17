@@ -15,3 +15,14 @@ for factor in range(x, 0, -1):
         print('%d和%d的最大公约数是%d' % (x, y, factor))
         print('%d和%d的最小公倍数是%d' % (x, y, x * y // factor))
         break
+
+print("-------------")
+print("欧几里得算法的递归方法：")
+def gcd(x, y):
+    if y == 0:
+        return x
+    else:
+        return gcd(y, x%y)
+
+print('%d和%d的最大公约数是%d' % (x, y, gcd(x, y)))
+print('%d和%d的最小公倍数是%d' % (x, y, x * y // gcd(x, y)))
